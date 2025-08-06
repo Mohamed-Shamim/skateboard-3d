@@ -8,8 +8,16 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-blue: #4876ff;
+  --color-brand-lime: #d9f154;
+  --color-brand-navy: #2e3192;
+  --color-brand-orange: #ff7347;
+  --color-brand-pink: #f7d0e9;
+  --color-brand-purple: #692354;
+  --color-brand-gray: #fffdf9;
+  --font-bowlby: var(--font-bowlby);
+  --font-mono: var(--font-dm-mono);
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +27,102 @@
   }
 }
 
+@theme {
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-mono), monospace;
+}
+
+
+
+.bg-texture {
+  background-image: url('/bg-texture.webp');
+  background-size: 720px 480px;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+
+
+.button-cutout {
+  position: relative;
+  filter: drop-shadow(0 1px 0 #000) drop-shadow(-1px 0 0 #000) drop-shadow(1px 0 0 #000) drop-shadow(0 -1px 0 #000) drop-shadow(8px 8px 0 #000);
+
+  &:hover {
+    filter: drop-shadow(0 1px 0 #000) drop-shadow(-1px 0 0 #000) drop-shadow(1px 0 0 #000) drop-shadow(0 -1px 0 #000) drop-shadow(2px 2px 0 #000);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: calc(100% - 1px);
+    content: "";
+    background: inherit;
+    width: 1rem;
+    height: 100%;
+    clip-path: polygon(23% 19%,
+        0 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        29% 79%,
+        9% 80%,
+        0 33%);
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: calc(100% - 1px);
+    content: "";
+    background: inherit;
+    width: 1rem;
+    height: 100%;
+    clip-path: polygon(100% 0,
+        74% 28%,
+        100% 29%,
+        100% 70%,
+        84% 78%,
+        100% 100%,
+        0 100%,
+        0 0);
+  }
+}
+
+@keyframes squiggle {
+  0% {
+    filter: url("#squiggle-0");
+  }
+
+  25% {
+    filter: url("#squiggle-1");
+  }
+
+  50% {
+    filter: url("#squiggle-2");
+  }
+
+  75% {
+    filter: url("#squiggle-3");
+  }
+
+  100% {
+    filter: url("#squiggle-4");
+  }
+}
+
+.squiggle-animation {
+  animation: squiggle 0.5s infinite;
+}
+
+
+
+::-webkit-scrollbar {
+  display: none;
 }
