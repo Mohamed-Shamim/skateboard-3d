@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 
 const images = [
   "https://source.unsplash.com/Pd8tLVGx2O4/200x250",
