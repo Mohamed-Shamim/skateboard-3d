@@ -15,22 +15,22 @@ const TeamGridData = [
   },
   {
     id: "1",
-    background: "/all-board/sophie-back.png",
-    foreground: "/all-board/sophie-front.png",
+    background: "/all-board/carter-back.png",
+    foreground: "/all-board/carter-front.png",
     name: "Sophie Castillo",
     color: "text-brand-lime",
   },
   {
     id: "1",
-    background: "/all-board/sophie-back.png",
-    foreground: "/all-board/sophie-front.png",
+    background: "/all-board/dylan-back.png",
+    foreground: "/all-board/dylan-front.png",
     name: "Sophie Castillo",
     color: "text-brand-orange",
   },
   {
     id: "1",
-    background: "/all-board/sophie-back.png",
-    foreground: "/all-board/sophie-front.png",
+    background: "/all-board/jordan-back.png",
+    foreground: "/all-board/jordan-front.png",
     name: "Sophie Castillo",
     color: "text-brand-pink",
   },
@@ -38,7 +38,7 @@ const TeamGridData = [
 
 const TeamGrid = () => {
   return (
-    <div className=" bg-brand-navy bg-texture ">
+    <div className=" bg-brand-navy bg-texture py-8 ">
       <div className="w-full max-w-7xl px-8 mx-auto">
         <Heading
           size="lg"
@@ -47,7 +47,7 @@ const TeamGrid = () => {
         >
           THE TEAN
         </Heading>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4 pt-4">
           {TeamGridData.map((item) => (
             <div
               key={item.id}
@@ -75,7 +75,7 @@ const TeamGrid = () => {
                   {item.name}
                 </h3>
               </div>
-              <Button className="text-base">Build there board</Button>
+              <Button className="text-sm">Build there board</Button>
             </div>
           ))}
         </div>
