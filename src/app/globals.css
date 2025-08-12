@@ -48,6 +48,14 @@ body {
   background-position: center;
 }
 
+.bg-footer {
+  background-image: url('/all-board/pexels-artempodrez-4816744.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
 
 
 .button-cutout {

@@ -4,16 +4,18 @@ import { ProductGrid } from "@/pages/ProductGrid";
 import TextAndImage from "@/pages/TextAndImage";
 import VideoBlock from "@/pages/VideoBlock";
 import TeamGrid from "@/pages/TeamGrid";
+import Footer from "@/components/Footer";
 
 const page = () => {
   return (
-    <div>
+    <main>
       <Home />
       <ProductGrid />
       <TextAndImage />
       <VideoBlock />
       <TeamGrid />
-    </div>
+      <Footer />
+    </main>
   );
 };
 

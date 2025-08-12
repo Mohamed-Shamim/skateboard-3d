@@ -2,7 +2,6 @@ import { Button } from "@/components/Button";
 import { Heading } from "@/components/Heading";
 import { SkaterScribble } from "@/components/SkaterScribble";
 import clsx from "clsx";
-import { it } from "node:test";
 import React from "react";
 
 const TeamGridData = [
@@ -38,7 +37,7 @@ const TeamGridData = [
 
 const TeamGrid = () => {
   return (
-    <div className=" bg-brand-navy bg-texture py-8 ">
+    <div className=" bg-brand-navy bg-texture py-8 overflow-hidden ">
       <div className="w-full max-w-7xl px-8 mx-auto">
         <Heading
           size="lg"

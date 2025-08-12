@@ -4,13 +4,13 @@ import { LazyYouTubePlayer } from "@/components/LazyYouTubePlayer";
 import clsx from "clsx";
 
 const MASK_CLASSES =
-  "[mask-image:url(/video-mask.png)] [mask-mode:alpha] [mask-position:center] [mask-repeat:no-repeat] [mask-size:contain]";
+  "[mask-image:url(/video-mask.png)] [mask-mode:alpha] [mask-position:center] [mask-repeat:no-repeat] [mask-size:contain] ";
 
 const VideoBlock = () => {
   return (
-    <div className="bg-texture bg-zinc-900 py-8">
+    <div className="bg-texture bg-zinc-900 py-8 overflow-hidden px-4">
       <h2 className="sr-only">Video Reel</h2>
-      <div className="relative aspect-video max-w-7xl px-5 mx-auto">
+      <div className="relative aspect-video max-w-7xl px-2 mx-auto">
         {/* mask */}
         <div
           className={clsx(

@@ -39,7 +39,7 @@ const productsData = [
 
 export const ProductGrid = () => {
   return (
-    <div className="bg-texture py-10">
+    <div className="bg-texture py-10 overflow-hidden">
       <div className=" max-w-7xl mx-auto px-8 ">
         <div className="text-center pt-7">
           <Heading size="lg" as="h2">

@@ -50,7 +50,7 @@ const StickyTextAndImage = () => {
         <div
           key={item.id}
           className={clsx(
-            "sticky top-[calc(var(--index)*2rem)] w-full transition-all duration-700",
+            "sticky top-[calc(var(--index)*2rem)] w-full transition-all duration-700 overflow-hidden",
             `z-[${index}]`,
             item.theme === "Blue" && "bg-texture bg-brand-blue text-white",
             item.theme === "Orange" && "bg-texture bg-brand-orange text-white",
